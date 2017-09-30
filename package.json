@@ -1,0 +1,27 @@
+{
+  "name": "date-streak",
+  "version": "0.0.1",
+  "private": false,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dkunin/date-streak.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dkunin/date-streak/issues"
+  },
+  "scripts": {
+    "test": "ava",
+    "test:watch": "ava --verbose --watch",
+    "start": "node ./",
+    "dev": "node ./",
+    "build": "NODE_ENV=production node ./"
+  },
+  "homepage": "https://github.com/dkunin/date-streak",
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "0.22.0",
+    "eslint": "4.8.0"
+  }
+}
