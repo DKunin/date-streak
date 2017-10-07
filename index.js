@@ -16,6 +16,7 @@ function determineStreak(dateArray) {
         .sort()
         .reverse();
 
+    let lastStreakDetermined = false;
     const lastStreak = normalizeDates.reduce(function(
         newArrayOfStreaks,
         singleItem
@@ -28,8 +29,10 @@ function determineStreak(dateArray) {
             prevNumber = 6;
         }
 
-        if (!newArrayOfStreaks.length || prevNumber === currentItem) {
+        if (!lastStreakDetermined && !newArrayOfStreaks.length || prevNumber === currentItem) {
             return newArrayOfStreaks.concat(singleItem);
+        } else {
+            lastStreakDetermined = true;
         }
 
         return newArrayOfStreaks;
@@ -43,7 +46,7 @@ function determineStreak(dateArray) {
 
     return {
         isCurrentlyOnStreak: isThereAToday,
-        lengthOfTheLastStreak: lastStreak.length
+        lengthOfTheStreak: lastStreak.length
     };
 }
 

@@ -34,8 +34,8 @@ test('determine if passed array is a streak', t => {
     ]);
 
     t.true(aWeekAndADayStreak.isCurrentlyOnStreak);
-    t.is(aWeekAndADayStreak.lengthOfTheLastStreak, 8);
+    t.is(aWeekAndADayStreak.lengthOfTheStreak, 8);
 
     t.false(notOnAStreakWeek.isCurrentlyOnStreak);
-    t.is(notOnAStreakWeek.lengthOfTheLastStreak, 7);
+    t.is(notOnAStreakWeek.lengthOfTheStreak, 7);
 });
